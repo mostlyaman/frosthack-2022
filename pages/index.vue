@@ -74,7 +74,53 @@
       </v-card>
     </v-col>
   </v-row>
+  
+  <div>
+
+     <p class="font-weight-white text">
+      OUR PLATFORM
+    </p>
+
+    <p class="font-weight-white text">
+     FEATURES
+    </p>
+    <p class="font-weight-white text">
+      ABOUT US
+    </p>
+
 </template>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Londrina+Shadow&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300&display=swap');
+
+ .text{
+  font-size: 70px;
+  padding-top: 30px;
+  text-align: right;
+  font-family:Londrina Shadow;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+  
+
+  .text:hover{
+    -webkit-text-stroke: 1px white;
+   color: white;
+   text-shadow:
+       3px 3px 0 #fff,
+     -1px -1px 0 #fff,  
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+       1px 1px 0 #fff;
+  
+  }
+
+
+</style>
 
 <script>
 export default {
