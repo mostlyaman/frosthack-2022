@@ -23,3 +23,7 @@ export default {
   name: 'InspirePage'
 }
 </script>
+
+<style>
+
+</style>
