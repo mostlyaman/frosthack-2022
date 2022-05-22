@@ -67,7 +67,7 @@
 
   .container  {
 	background: #000;
-	min-height: 40vh;
+	min-height: 100vh;
   max-width: 100%;
 	display: flex;
 	flex-direction: row;
