@@ -38,13 +38,38 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    "nuxt-vite",
+    // "nuxt-vite",
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: "AIzaSyB-bmyJ17RzwRNjWpelqU9eUkulpC3zPsc",
+          authDomain: "frosthack-2022.firebaseapp.com",
+          projectId: "frosthack-2022",
+          storageBucket: "frosthack-2022.appspot.com",
+          messagingSenderId: "960524380689",
+          appId: "1:960524380689:web:33b7c3784275f16d3b1fb0",
+          measurementId: "G-C0YVXNC0GX"
+        },
+        services:{
+          auth: {
+            initialize: {
+              onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
+              onAuthStateChangedAction: 'onAuthStateChangedAction'
+            },
+          },
+          firestore: true,
+          storage: true,
+        }
+
+      }
+    ]
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

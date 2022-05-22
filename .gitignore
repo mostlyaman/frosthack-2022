@@ -92,4 +92,7 @@ sw.*
 # tests
 test/
 
-
+# Firebase
+.firebase/
+.firebaserc
+firebase.json
