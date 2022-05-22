@@ -1,5 +1,5 @@
 <template>
-  <v-app >
+  <v-app height = '100%'>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -60,7 +60,7 @@
       <v-toolbar-title class = "ml-2" v-text="title" />
       <v-spacer />
 
-      <v-menu 
+      <v-menu v-if = "$store.state.user"
       v-model="menu2"
       close-on-content-click
       :nudge-width="200"
@@ -98,7 +98,7 @@
   <div v-if = "!$store.state.user" class="text-center">
     <v-menu 
       v-model="menu"
-      :close-on-content-click="false"
+      close-on-content-click
       :nudge-width="200"
       offset-y
       eager
@@ -210,22 +210,27 @@ export default {
   data () {
     return {
       clipped: true,
-      drawer: false,
+      drawer: true,
       menu: false,
       menu2: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-code-braces',
+          title: 'Coding',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
+          icon: 'mdi-web',
+          title: 'Web Developement',
           to: '/inspire'
+        },
+        {
+          icon: 'mdi-virtual-reality',
+          title: 'Virtual Experiences',
+          to: '/meet-virtually'
         }
       ],
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
       title: 'Forum'
@@ -234,7 +239,7 @@ export default {
   methods: {
     signout(){
       this.$fire.auth.signOut().then(()=> {
-        window.location = "/";
+        window.location = "/app";
       })
     }
   }

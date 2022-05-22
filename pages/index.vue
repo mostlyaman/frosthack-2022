@@ -1,35 +1,35 @@
 <template>
-    <div>
         <!-- Insert Home Page here -->
-        Home
-        <Nuxt-link to="/app">App</Nuxt-link>
+
         
         
-        <div class="container">
+<div class="container" >
+
+
+
+
  <p class="font-weight-white text t1">
      OUR PLATFORM 
-   
+    
     </p>
     <br>
-    <br>
+    <br><br><br>
 
     <p class="font-weight-white text t2">
      FEATURES  <br>
     </p>
 
-   <br>
+   <br><br>
 <p class="font-weight-white text t3">
      ABOUT US  <br>
     </p>
 
-    <div class="shape-blob"></div>
-	<div class="shape-blob one"></div>
-	<div class="shape-blob two"></div>
+
 
 
 </div>
 
-    </div>
+
 </template>
 
 <style >
@@ -67,7 +67,7 @@
 
   .container  {
 	background: #000;
-	min-height: 40vh;
+	height: 100%;
   max-width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -89,8 +89,6 @@
 
 .container .t3{
    padding-top: 400px;
-
- 
 }
 
 /* .container .t3 {
@@ -165,9 +163,7 @@
 
 
 
-#about{
-  min-height: 50vh;
-}
+
 
 </style>
 
