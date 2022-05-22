@@ -26,10 +26,16 @@
                 <v-card-text>Relax! You have no upcoming deadlines!</v-card-text>
             </div>
             <div v-else>
-                <div v-for = "event in deadlines.data" :key = "event.title">
+                <v-list v-for = "event in deadlines.data" :key = "event.title">
 
-                <Deadline data = event></Deadline>
-                </div>
+                    <v-list-item >
+                        <v-card width="100%" outlined  color="transparent">
+                        <v-card-title>{{event.title}}</v-card-title>
+                        <v-card-subtitle>{{event.date}} {{event.time}}</v-card-subtitle>
+                        <v-text>{{event.description}}</v-text>
+                        </v-card>
+                    </v-list-item>
+                </v-list>
             </div>
 
         </div>
@@ -37,6 +43,7 @@
 </template>
 
 <script>
+import Deadline from './Deadline.vue'
 export default {
     name: "Deadlines",
     data(){
@@ -45,6 +52,7 @@ export default {
             errorOccured: false
         }
     },
+    components:{Deadline},
     mounted(){
         // Fetch saved Deadlines from database
         if(this.$store.state.user){

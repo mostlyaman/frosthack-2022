@@ -1,5 +1,5 @@
 <template>
-  <v-app height = '100%'>
+  <v-app >
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -82,7 +82,7 @@
         <v-list-item>
           <AddEvent></AddEvent>
         </v-list-item>
-        <v-list-item>Add Todo</v-list-item>
+
       </v-list>
       </v-menu>
 
@@ -239,7 +239,7 @@ export default {
   methods: {
     signout(){
       this.$fire.auth.signOut().then(()=> {
-        window.location = "/app";
+        window.location = "/";
       })
     }
   }

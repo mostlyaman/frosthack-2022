@@ -154,6 +154,7 @@
               }
               this.$fire.firestore.collection('deadlines').doc(this.$store.state.user.uid).set(data).then(()=>{
                 console.log("Deadline successfully added")
+                window.location = '/'
               }).catch(error=>{
                 console.log(events)
                 alert("Adding Deadline Failed!")
