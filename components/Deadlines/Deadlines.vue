@@ -25,6 +25,12 @@
             <div v-if = "deadlines.length === 0">
                 <v-card-text>Relax! You have no upcoming deadlines!</v-card-text>
             </div>
+            <div v-else>
+                <div v-for = "event in deadlines.data" :key = "event.title">
+
+                <Deadline data = event></Deadline>
+                </div>
+            </div>
 
         </div>
     </v-card>
