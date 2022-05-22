@@ -217,12 +217,12 @@ export default {
         {
           icon: 'mdi-code-braces',
           title: 'Coding',
-          to: '/'
+          to: '/coding'
         },
         {
           icon: 'mdi-web',
           title: 'Web Developement',
-          to: '/inspire'
+          to: '/web'
         },
         {
           icon: 'mdi-virtual-reality',
